@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+5.times do
+  Restaurant.create(
+    name: Faker::Restaurant.name,
+    rating: Faker::Number.between(from: 0, to: 5)
+  )
+end
